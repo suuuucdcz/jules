@@ -70,3 +70,20 @@ python3 todo.py rm 1
 ```
 
 *Note : Les données sont sauvegardées dans un fichier caché dans votre dossier personnel (`~/.todo_list.db`), vous ne perdrez donc pas vos tâches même si vous fermez le terminal !*
+
+---
+
+# Interface Graphique (GUI)
+
+Vous préférez les interfaces visuelles au terminal ? J'ai également créé une interface graphique pour le gestionnaire de tâches !
+Elle utilise exactement la même base de données que la version en ligne de commande, vos tâches sont donc synchronisées entre les deux outils.
+
+## Lancer l'interface graphique
+
+Il vous suffit d'exécuter ce script Python :
+
+```bash
+python3 todo_gui.py
+```
+
+Une fenêtre va s'ouvrir. Vous pourrez y ajouter des tâches, définir leur priorité, cocher celles qui sont terminées, et les supprimer très facilement à la souris !
