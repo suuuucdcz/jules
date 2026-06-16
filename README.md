@@ -27,3 +27,46 @@ python3 mandelbrot.py
 *(Ou `python mandelbrot.py` si vous êtes sous Windows)*
 
 Vous devriez voir la fractale s'afficher directement dans votre terminal !
+
+---
+
+# Todo Manager (Nouveau !)
+
+J'ai également ajouté un gestionnaire de tâches (Todo list) en ligne de commande, plus poussé et très utile pour votre quotidien !
+Il utilise `sqlite3` pour sauvegarder vos tâches de façon permanente.
+
+## Comment l'utiliser ?
+
+Le script s'appelle `todo.py`. Voici les commandes disponibles :
+
+### Ajouter une tâche
+```bash
+python3 todo.py add "Acheter du pain"
+```
+Vous pouvez spécifier une priorité de 1 (Haute) à 3 (Basse) avec `-p` :
+```bash
+python3 todo.py add "Finir le projet" -p 1
+```
+
+### Lister les tâches
+Pour voir vos tâches en cours (triées par priorité) :
+```bash
+python3 todo.py ls
+```
+Pour voir **toutes** vos tâches, y compris celles terminées :
+```bash
+python3 todo.py ls -a
+```
+
+### Marquer une tâche comme terminée
+Utilisez l'ID de la tâche (visible quand vous faites `ls`) :
+```bash
+python3 todo.py done 1
+```
+
+### Supprimer une tâche
+```bash
+python3 todo.py rm 1
+```
+
+*Note : Les données sont sauvegardées dans un fichier caché dans votre dossier personnel (`~/.todo_list.db`), vous ne perdrez donc pas vos tâches même si vous fermez le terminal !*
